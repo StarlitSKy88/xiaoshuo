@@ -1,0 +1,28 @@
+{
+    "name": "小说项目开发环境",
+    "image": "mcr.microsoft.com/devcontainers/python:3.9",
+    "forwardPorts": [8000, 8080, 9000],
+    "postCreateCommand": "pip install -r requirements.txt",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-toolsai.jupyter",
+                "njpwerner.autodocstring",
+                "VisualStudioExptTeam.vscodeintellicode"
+            ],
+            "settings": {
+                "python.linting.enabled": true,
+                "python.linting.pylintEnabled": true,
+                "editor.formatOnSave": true,
+                "python.formatting.provider": "black",
+                "python.analysis.typeCheckingMode": "basic"
+            }
+        }
+    },
+    "features": {
+        "git": "latest"
+    },
+    "remoteUser": "vscode"
+}
